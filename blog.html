@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Viagens</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seu arquivo de estilo personalizado -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- CSS Interno com os ajustes para tons de cinza -->
+    <style>
+        .card-viagem {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .card-viagem img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        /* Efeito de zoom na imagem */
+        .card-viagem:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Gradiente escuro sobre a foto */
+        .overlay-viagem {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            color: white;
+        }
+
+        /* Botão estilizado em cinza escuro no hover */
+        .btn-ver-mais {
+            background-color: #fff;
+            color: #212529;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-ver-mais:hover {
+            background-color: #495057; /* Cinza grafite ao passar o mouse */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu (Substituído bg-primary por bg-secondary para cinza médio) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Meu Blog de Viagens</a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Principal -->
+    <div class="container mt-4">
+        <div class="p-5 bg-light rounded shadow-sm text-center border-start border-secondary border-5">
+            <h1 class="display-4 fw-bold text-dark">Explore o Próximo Destino</h1>
+            <p class="lead text-muted">Inspirações, roteiros e fotografias de lugares impressionantes.</p>
+        </div>
+    </div>
+
+    <!-- Galeria de Destinos -->
+    <div class="container mt-5 mb-5">
+        <h2 class="mb-4 fw-bold text-secondary">Destinos Recentes</h2>
+
+        <div class="row g-4">
+
+            <!-- Card 1: Brasília -->
+            <div class="col-md-4">
+                <div class="card card-viagem shadow">
+                    <img src="https://picsum.photos/600/800?brasilia" alt="Brasília">
+                    <div class="overlay-viagem">
+                        <h3 class="h4 fw-bold mb-1">Brasília</h3>
+                        <p class="small mb-2">Linhas, curvas e a arquitetura monumental da capital federal.</p>
+                        <div>
+                            <a href="#" class="btn-ver-mais">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Chapada dos Veadeiros -->
+            <div class="col-md-4">
+                <div class="card card-viagem shadow">
+                    <img src="https://picsum.photos/600/800?chapada" alt="Chapada dos Veadeiros">
+                    <div class="overlay-viagem">
+                        <h3 class="h4 fw-bold mb-1">Chapada dos Veadeiros</h3>
+                        <p class="small mb-2">Cachoeiras paradisíacas e o misticismo do cerrado brasileiro.</p>
+                        <div>
+                            <a href="#" class="btn-ver-mais">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Manaus -->
+            <div class="col-md-4">
+                <div class="card card-viagem shadow">
+                    <img src="https://picsum.photos/600/800?manaus" alt="Manaus">
+                    <div class="overlay-viagem">
+                        <h3 class="h4 fw-bold mb-1">Manaus</h3>
+                        <p class="small mb-2">A grandiosidade da floresta amazônica e a cultura do Norte.</p>
+                        <div>
+                            <a href="#" class="btn-ver-mais">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Rodapé (Mudado para bg-secondary) -->
+    <footer class="bg-secondary text-white text-center p-3 mt-5">
+        © 2026 - Blog de Viagens
+    </footer>
+
+    <!-- Bootstrap 5 Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
